@@ -2,13 +2,17 @@ import styled from '@emotion/styled';
 
 export const SiteLayoutBackground = styled.div`
   width: 100%;
-  padding: 0 14px;
+  padding: 28vw 14px 0;
   text-align: center;
-  h2 {
+  .sub_title {
+    width: 160px;
+    margin: 5vw auto;
+    font-weight: 600;
+    word-break: keep-all;
   }
   .ant-list-item {
     margin: 4vw 0;
-    padding: 3vw;
+    padding: 3vw 5vw;
     color: #a6a6a6;
     text-align: left;
     border-radius: 4rem;
@@ -30,6 +34,11 @@ export const SiteLayoutBackground = styled.div`
       color: #595959;
     }
   }
+  .Q {
+    color: #456fc5;
+    font-size: 2rem;
+    font-weight: 600;
+  }
   .ant-list-item-meta-content {
     color: #a6a6a6;
   }
@@ -48,6 +57,19 @@ export const SiteLayoutBackground = styled.div`
     }
   }
   @media only screen and (min-width: 769px) {
-    background: white;
+    width: 100%;
+    padding: 28vw 15vw 0;
+    text-align: center;
+    .sub_title {
+      width: 100%;
+      margin: 5vw auto;
+      font-weight: 600;
+      word-break: keep-all;
+    }
+    .ant-list-item {
+      margin: 2vw 0;
+      padding: 2vw 3vw;
+      border-radius: 10rem;
+    }
   }
 `;

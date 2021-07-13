@@ -44,19 +44,30 @@ const PartAbout: FC = () => {
     <section className="section">
       <Content className="site-layout">
         <SiteLayoutBackground>
+          <div className="bg_pastel_pabout"></div>
           <h1 className="main_title">
             <span>둥지는</span>
             <span>어떤 팀으로</span>
             <span>구성되어 있나요?</span>
           </h1>
           <div className="part_img">
-            <img src="http://lorempixel.com/1500/900/cats/1/"></img>
+            <img src="/assets/img/img_home_team_01.png"></img>
           </div>
           <Tabs className="part_tabs_wrap" tabPosition={'bottom'}>
             {data &&
               data.map((item, index) => {
                 return (
-                  <TabPane tab={<p className="sub_title">{item.part}</p>} key={`sub${index + 1}`}>
+                  <TabPane
+                    tab={
+                      <p className="sub_title">
+                        <span>{item.part}</span>
+                        <span className="view_fill">
+                          <img src="/assets/img/icon/view-fill.png" />
+                        </span>
+                      </p>
+                    }
+                    key={`sub${index + 1}`}
+                  >
                     <div className="tabs_content_wrap">
                       <h2>
                         <span>{item.part}</span>

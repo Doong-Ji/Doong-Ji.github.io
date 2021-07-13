@@ -10,7 +10,6 @@ import { FC } from 'react';
 const Home: FC = () => {
   return (
     <HomeWrap className="home_wrap">
-      <p>zz</p>
       <HomeMain />
       <DoongjiAbout />
       <ProjectCarousel />

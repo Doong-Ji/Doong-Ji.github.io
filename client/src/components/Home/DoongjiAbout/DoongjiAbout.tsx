@@ -16,7 +16,7 @@ const DoongjiAbout: FC = () => {
                 <p className="sub_title">다양한 사람들이 모여서 프로젝트를 진행하고 질문하는 공간입니다.</p>
               </div>
               <div className="img_box">
-                <img src="http://lorempixel.com/1500/900/cats/1/" className="" />
+                <img src="/assets/img/img_home_about_01.png" className="" />
               </div>
             </div>
             <div className="doongji_about_content two">
@@ -28,7 +28,7 @@ const DoongjiAbout: FC = () => {
                 </p>
               </div>
               <div className="img_box">
-                <img src="http://lorempixel.com/1500/900/cats/1/" className="" />
+                <img src="/assets/img/img_home_about_02.png" className="" />
               </div>
             </div>
           </article>

@@ -27,18 +27,18 @@ const QuestionList: FC = () => {
       <Content className="site-layout">
         <SiteLayoutBackground>
           <h2 className="sub_title">
-            <span>궁금한게 있으시다면</span>
-            <br></br>
-            <span>무엇이든지 물어보세요!</span>
+            <span>궁금한게 있으시다면 무엇이든지 물어보세요!</span>
           </h2>
           <List
             itemLayout="horizontal"
             dataSource={data}
             renderItem={(item) => (
               <List.Item>
-                <div>d</div>
+                <div className="Q">Q.</div>
                 <List.Item.Meta title={<a href="https://ant.design">{item.title}</a>} description={item.contents} />
-                <div>d</div>
+                <div>
+                  <img src="/assets/ico/ico_next_lg.svg" />
+                </div>
               </List.Item>
             )}
           />
