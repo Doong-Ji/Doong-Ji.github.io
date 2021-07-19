@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./header_m.css" />
+    <link rel="stylesheet" href="../assets/global/import.css" />
+  </head>
+  <body>
+    <!-- component : HeaderM -->
+    <header class="gnb_mo">
+      <button class="btn_ham">메뉴버튼</button>
+      <h1 class="logo_main">doongji logo</h1>
+      <!-- snb 로그인, 로그아웃 상태에 따라 class 'on' 추가 -->
+      <ul class="snb status_logout on">
+        <li><a href="">로그인</a></li>
+        <li><a href="">회원가입</a></li>
+      </ul>
+      <ul class="snb status_login">
+        <!-- 새로운 알림 뜰경우 class 'on' 추가 -->
+        <li class="alarm on"><a href="">알림</a></li>
+        <li><a href="">내 정보</a></li>
+      </ul>
+      <!-- ham 버튼 클릭시 aside class 'on' 추가 -->
+      <aside class="on">
+        <nav>
+          <button class="btn_close">닫기</button>
+          <p>
+            안녕하세요 고객님, <br />
+            <a href="">로그인</a> 하시면 둥지의 다양한 컨텐츠를 즐기실 수 있습니다.
+          </p>
+          <ul>
+            <li><a href="">소개</a></li>
+            <li><a href="">프로젝트</a></li>
+            <li><a href="">캘린더</a></li>
+            <!-- 버튼클릭시 class 'on' 추가 -->
+            <li class="on">
+              <a href="">커뮤니티</a>
+              <ul class="lnb">
+                <li><a href="">공지사항</a></li>
+                <li><a href="">자유게시판</a></li>
+                <li><a href="">질문게시판</a></li>
+                <li><a href="">링크게시판</a></li>
+              </ul>
+            </li>
+            <li><a href="">Q&A</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </header>
+  </body>
+</html>

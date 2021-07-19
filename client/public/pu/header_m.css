@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/* 모바일 헤더 */
+.gnb_mo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  position: relative;
+  height: 60px;
+}
+.gnb_mo .btn_ham {
+  width: 30px;
+  height: 30px;
+  background: url(../assets/ico/ico_ham.svg) left center / 20px 12px no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  padding-right: 40px;
+  box-sizing: content-box;
+}
+.gnb_mo .logo_main {
+  width: 95px;
+  height: 31px;
+  background: url("../assets/img/logo_doongji.png") center / cover no-repeat;
+  text-indent: -9999px;
+}
+.gnb_mo .snb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  display: none;
+  width: 70px;
+}
+.gnb_mo .snb.on {
+  display: inline-flex;
+}
+.gnb_mo .snb li {
+  padding: 5px;
+  text-indent: -9999px;
+  margin-left: 5px;
+}
+.gnb_mo .status_logout li:first-child {
+  width: 15px;
+  height: 15px;
+  background: url(../assets/ico/ico_user_lg.svg) center / cover no-repeat;
+}
+.gnb_mo .status_logout li:last-child {
+  width: 15px;
+  height: 15px;
+  background: url("../assets/ico/ico_signin_lg.svg") center / cover no-repeat;
+}
+.gnb_mo .status_login .alarm {
+  width: 15px;
+  padding: 0 10px;
+  background: url("../assets/ico/ico_alarm.svg") center / 20px no-repeat;
+  text-indent: -9999px;
+  position: relative;
+}
+.gnb_mo .status_login .alarm.on::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 16px;
+  right: 8px;
+  background: #e74659;
+  border-radius: 50%;
+}
+.gnb_mo .status_login li:last-child {
+  width: 20px;
+  height: 20px;
+  background: url(../assets/img/img_profile_default.png) center / cover
+    no-repeat;
+  text-indent: -9999px;
+  border-radius: 50%;
+}
+
+.gnb_mo aside {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(214, 214, 214, 0.7);
+  display: none;
+}
+.gnb_mo aside.on {
+  display: block;
+}
+.gnb_mo nav {
+  width: 81.25%;
+  background: #fff;
+  border-radius: 0 30px 30px 0;
+  box-shadow: 2px 0 15px rgba(166, 166, 166, 0.4);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.gnb_mo nav button {
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+  margin-bottom: 0;
+  background: url(../assets/ico/ico_close.svg) left top / 23px no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.gnb_mo nav > p {
+  font-size: 0.8125rem;
+  padding: 40px 20px;
+  word-break: keep-all;
+}
+.gnb_mo nav > p a {
+  display: inline-block;
+  width: auto;
+  color: #0442bf;
+  text-decoration: underline;
+}
+.gnb_mo nav ul {
+  font-size: 0.875rem;
+}
+.gnb_mo nav li.on > a {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+.gnb_mo nav li.on > a::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #0442bf;
+  border-radius: 50%;
+  vertical-align: top;
+  margin-right: 4px;
+}
+.gnb_mo nav li a {
+  line-height: 22px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.gnb_mo .lnb {
+  background: rgba(242, 242, 242, 0.7);
+  padding: 12px 10px;
+}

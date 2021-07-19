@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/* 내정보팝업 */
+.pop_profile {
+  width: 210px;
+  background: #456fc5;
+  text-align: center;
+  border-radius: 30px;
+  padding-top: 80px;
+  position: relative;
+}
+.pop_profile::after {
+  content: '';
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #456fc5;
+  position: absolute;
+  right: 15px;
+  top: -9px;
+}
+.pop_profile figure {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url(../assets/img/test/img_user_profile.jpg) center / cover no-repeat;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+}
+.pop_profile ul {
+  background: #fff;
+  padding-top: 54px;
+  padding: 54px 14px 0;
+  text-align: center;
+}
+.pop_profile button {
+  width: 100%;
+  border: 1px solid #f5f9fd;
+  background: #f5f9fd;
+  border-radius: 0 0 30px 30px;
+  padding: 20px 0;
+}
+.pop_profile a {
+  color: #0442bf;
+  display: inline-block;
+  width: auto;
+  margin: 13px auto 18px;
+}
+.btn_profile {
+  padding-left: 24px;
+  background: url(../assets/ico/ico_link_b.svg) left / 16px no-repeat;
+  text-align: left;
+}
+.btn_profile p {
+  display: inline-block;
+}
+
+/* 알림팝업 */
+.pop_alarm {
+  width: 400px;
+  padding: 22px 0 18px;
+  background: #fff;
+  box-shadow: 5px 5px 15px rgba(190, 197, 204, 2.5);
+  border-radius: 30px;
+  position: relative;
+  font-size: 0.8125rem;
+}
+.pop_alarm::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 29px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  right: 40px;
+  top: -9px;
+}
+.pop_alarm div {
+  padding: 14px 26px;
+}
+.pop_alarm > p {
+  padding: 4px 26px;
+}
+.pop_alarm > p:nth-of-type(2) {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  display: inline-block;
+  border-bottom: 5px solid #456fc5;
+  margin-left: 25px;
+  padding: 0px 0 7px;
+}
+.pop_alarm > p:nth-of-type(2) span {
+  color: #456fc5;
+}
+.alarm_contents > p:first-child::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #e2e2e2;
+  vertical-align: text-top;
+  margin-right: 5px;
+}
+.alarm_contents > p:nth-of-type(2) {
+  color: #a6a6a6;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.alarm_contents > p:nth-of-type(2) span {
+  margin-left: 10px;
+}
+.alarm_contents > p:nth-of-type(1) {
+  width: calc(100% - 60px);
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pop_alarm .new {
+  background: #f5f9fd;
+}
+.alarm_contents.new p:first-child::before {
+  background: #456fc5;
+}
+.pop_alarm .time {
+  float: right;
+}
