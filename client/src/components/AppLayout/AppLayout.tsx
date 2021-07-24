@@ -1,114 +1,121 @@
 import Layout, { Footer, Header } from 'antd/lib/layout/layout';
-import { FC, useCallback, useState } from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { HeaderBox, Logo } from './styled';
-import { animateScroll as scroll } from 'react-scroll';
-import { Dropdown, Icon } from 'semantic-ui-react';
-
-const trigger = (
-  <span>
-    <Icon name="user" /> Hello, Bob
-  </span>
-);
-const alam = (
-  <span>
-    <Icon name="user" />
-  </span>
-);
-const options = [
-  {
-    key: 'user',
-    text: (
-      <span>
-        Signed in as <strong>Bob Smith</strong>
-      </span>
-    ),
-    disabled: true,
-  },
-  { key: 'profile', text: 'Your Profile' },
-  { key: 'stars', text: 'Your Stars' },
-  { key: 'explore', text: 'Explore' },
-  { key: 'integrations', text: 'Integrations' },
-  { key: 'help', text: 'Help' },
-  { key: 'settings', text: 'Settings' },
-  { key: 'sign-out', text: 'Sign Out' },
-];
+import ScrollToTop from './ScrollToTop';
+import BackToTopButton from './BackToTopButton';
+import { AlarmPop, FooterBox, HeaderBox } from './styled';
+import { useState } from 'react';
+import { useCallback } from 'react';
 
 const AppLayout: FC = ({ children }) => {
   const location = useLocation().pathname.split('/')[1];
-  const [isLogin, setIsLogin] = useState(false);
-  const toggleHome = useCallback(() => {
-    scroll.scrollToTop();
+  const [connectStatus, setConnectStatus] = useState(true);
+  const [alarmStatus, setAlarmStatus] = useState(true);
+  const [alarmToggleStatus, setAlarmToggleStatus] = useState(false);
+
+  const onHandleAlarmClick = useCallback(() => {
+    setAlarmToggleStatus((prev) => !prev);
   }, []);
   return (
-    <HeaderBox>
-      <Layout>
-        <div className="header">
-          <header className="gnb_pc">
+    <>
+      <ScrollToTop />
+      <HeaderBox>
+        <header className="gnb_pc">
+          <Link to="/">
             <h1 className="logo_main">doongji</h1>
-            <nav>
-              <ul className="gnb">
-                <li className={location === 'about' ? 'active' : ''}>
-                  <Link to="/about">소개</Link>
-                </li>
-                <li className={location === 'project' ? 'active' : ''}>
-                  <Link to="/project">프로젝트</Link>
-                </li>
-                <li className={location === 'calendar' ? 'active' : ''}>
-                  <Link to="/calendar">캘린더</Link>
-                </li>
-                <li className={location === 'community' ? 'active' : ''}>
-                  <Link to="/community">커뮤니티</Link>
-                  <ul className="lnb">
+          </Link>
+
+          <nav>
+            <ul className="gnb">
+              <li className={location === 'about' ? 'active' : ''}>
+                <Link to="/about">소개</Link>
+              </li>
+              <li className={location === 'project' ? 'active' : ''}>
+                <Link to="/project">프로젝트</Link>
+              </li>
+              <li className={location === 'calendar' ? 'active' : ''}>
+                <Link to="/calendar">캘린더</Link>
+              </li>
+              <li className={location === 'community' ? 'active' : 'dropDownStatus'}>
+                <Link to="/community">커뮤니티</Link>
+                <ul className="lnb">
+                  <li>
+                    <Link to="/community">공지사항</Link>
+                  </li>
+                  <li>
+                    <Link to="/community">자유게시판</Link>
+                  </li>
+                  <li>
+                    <Link to="/community">질문게시판</Link>
+                  </li>
+                  <li>
+                    <Link to="/community">링크게시판</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className={location === 'question' ? 'active' : ''}>
+                <Link to="/question">Q&A</Link>
+              </li>
+            </ul>
+          </nav>
+          {connectStatus ? (
+            <ul className="snb status_login">
+              <li className={alarmStatus ? 'alarm on' : 'alarm'} onClick={onHandleAlarmClick}>
+                <div className="alarm_btn"></div>
+                <AlarmPop className={alarmToggleStatus ? 'active' : ''}>
+                  <p>바나나우유는빙그레님의 글에 누군가 답해줬어요!</p>
+                  <p>
+                    읽지 않은 알림 <span>3</span>
+                  </p>
+                  <ul>
                     <li>
-                      <Link to="/">공지사항</Link>
+                      <div className="alarm_contents new">
+                        <p>
+                          <i></i>
+                          <b>둥지프로젝트 일정</b>이 업데이트되었습니다.
+                        </p>
+                        <p className="time">5분 전</p>
+                      </div>
                     </li>
                     <li>
-                      <Link to="/">자유게시판</Link>
-                    </li>
-                    <li>
-                      <Link to="/">질문게시판</Link>
-                    </li>
-                    <li>
-                      <Link to="/">링크게시판</Link>
+                      <div className="alarm_contents">
+                        <p>[오늘 날씨는 화창하고...] 댓글을 확인해주세요.</p>
+                        <span className="time">5분 전</span>
+                        <p>
+                          by. 제티초코우유<span>오늘 점심은 뭐먹지?</span>
+                        </p>
+                      </div>
                     </li>
                   </ul>
-                </li>
-                <li className={location === 'question' ? 'active' : ''}>
-                  <Link to="/question">Q&A</Link>
-                </li>
-              </ul>
-            </nav>
-            {/* <!-- snb 로그인, 로그아웃 상태에 따라 className 'on' 추가 --> */}
+                </AlarmPop>
+              </li>
+              <li>
+                <Link to="/"></Link>
+              </li>
+            </ul>
+          ) : (
             <ul className="snb status_logout on">
               <li>
                 <Link to="/login">로그인</Link>
               </li>
               <li>
-                <Link to="/signup">로그아웃</Link>
+                <Link to="/signin">회원가입</Link>
               </li>
             </ul>
-            <ul className="snb status_login">
-              <li>
-                <Link to="/">알림</Link>
-              </li>
-              <li>
-                <Link to="/">내 정보</Link>
-              </li>
-            </ul>
-          </header>
+          )}
+        </header>
+      </HeaderBox>
+      {children}
+      <FooterBox>
+        <div>
+          <h1>로고</h1>
+          <p>Copyrightdⓒ 2021. doongji. All rights reserved</p>
+          <a href="">doongji@gmail.com</a>
         </div>
-        {children}
-        <Footer
-          style={{
-            marginTop: '64px',
-          }}
-        >
-          Footer
-        </Footer>
-      </Layout>
-    </HeaderBox>
+      </FooterBox>
+      <BackToTopButton />
+    </>
   );
 };
 

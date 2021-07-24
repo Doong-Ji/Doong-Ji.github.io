@@ -9,12 +9,24 @@ const GlobalStyle = css`
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
     height: 100%;
+    color: #000;
+    text-decoration: none;
+    list-style: none;
   }
   html {
     height: 100%;
   }
   .ant-carousel .slick-dots li button {
     height: 13px;
+  }
+  a:link {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #000;
+    text-decoration: none;
   }
 `;
 
