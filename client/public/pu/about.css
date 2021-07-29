@@ -1,0 +1,510 @@
+@charset "UTF-8";
+/* user profile */
+.user_profile_wrap {
+  display: flex;
+}
+.user_profile {
+  width: 55.9322%;
+  text-align: left;
+  display: flex;
+  gap: 75px;
+}
+.user_profile figure {
+  width: calc(272px);
+  height: 272px;
+  background: url('../assets/img/test/img_leader_profile.jpg') center / cover no-repeat;
+  text-indent: -9999px;
+  border-radius: 50px;
+  box-shadow: 15px 15px 30px rgba(209, 217, 230, 0.96);
+}
+.user_profile p:first-child {
+  max-width: 262px;
+  font-size: 1.6875rem;
+  line-height: 1.7;
+  margin-bottom: 17px;
+}
+.user_profile p:first-child span {
+  font-weight: 500;
+}
+.user_profile p:last-of-type {
+  max-width: 262px;
+  min-height: 114px;
+  font-size: 1.375rem;
+}
+.user_profile ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.user_profile li {
+  width: 42px;
+  height: 42px;
+  text-indent: -9999px;
+  background: url('../assets/ico/ico_github_g.svg') center / contain no-repeat;
+  margin-top: 20px;
+}
+.user_profile li:nth-of-type(2) {
+  width: 38px;
+  height: 38px;
+  background-image: url('../assets/ico/ico_blog_b.svg');
+}
+/* user profile - type02 */
+.user_profile.type02 {
+  gap: 2.6041vw;
+  align-items: center;
+}
+.user_profile.type02 figure {
+  border: 26px solid #ecf0f3;
+  box-sizing: border-box;
+  box-shadow: -15px -15px 25px #fff, 15px 15px 30px rgba(209, 217, 230, 0.96);
+}
+.user_profile.type02 p:first-child {
+  max-width: 195px;
+  font-size: 1.5rem;
+  margin-bottom: 26px;
+  border-bottom: 5px solid #0442bf;
+  display: inline-block;
+  font-weight: 500;
+}
+.user_profile.type02 p:last-of-type {
+  max-width: 195px;
+  min-height: 74px;
+  font-size: 1.125rem;
+}
+.user_profile.type02 li {
+  width: 51px;
+  height: 51px;
+  text-indent: -9999px;
+  background: url('../assets/ico/ico_github_g.svg') center / contain no-repeat;
+  margin-top: 20px;
+}
+.user_profile.type02 li:nth-of-type(2) {
+  width: 42px;
+  height: 42px;
+  background-image: url('../assets/ico/ico_blog_b.svg');
+}
+
+/* intro */
+.intro {
+  margin: 0 auto;
+  background: linear-gradient(179.85deg, rgba(233, 240, 255, 0.9), rgba(69, 111, 197, 0) 72.2%);
+}
+.intro > div {
+  width: 61.458333%;
+  min-width: 1180px;
+  margin: 0 auto;
+  padding: 130px 0 60px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.intro figure {
+  width: calc(100% - 46.6101% - 4.2372%);
+  background: url('../assets/img/img_about_cloud_03.png') left 70% top no-repeat;
+}
+.intro figure i {
+  width: 222px;
+  height: 266px;
+  display: block;
+  margin: 110px auto;
+  background: url('../assets/img/test/img_leader_profile.jpg') center / cover no-repeat;
+  border: 14px solid #ecf0f3;
+  border-radius: 40px;
+  box-shadow: 15px 15px 30px rgba(209, 217, 230, 0.96);
+  text-indent: -9999px;
+  position: relative;
+}
+.intro figure i::before {
+  content: '';
+  width: 242px;
+  height: 101px;
+  display: inline-block;
+  background: url('../assets/img/img_about_cloud_01.png') no-repeat;
+  position: absolute;
+  left: -189px;
+  top: 51px;
+}
+.intro figure i::after {
+  content: '';
+  width: 277px;
+  height: 59px;
+  display: inline-block;
+  background: url('../assets/img/img_about_cloud_02.png') no-repeat;
+  position: absolute;
+  left: 156px;
+  top: 216px;
+}
+.intro article {
+  width: 46.6101%;
+  padding-right: 4.2372%;
+}
+.intro h3 {
+  font-size: 2.125rem;
+  font-weight: 400;
+  margin-bottom: 46px;
+}
+.intro .speech_bubble li {
+  margin-bottom: 20px;
+}
+.intro .speech_bubble li p {
+  display: inline-block;
+  padding: 16px 30px;
+  font-size: 1.25rem;
+  background: #fff;
+  border-radius: 45px;
+  position: relative;
+  line-height: 1.5;
+}
+.intro .speech_bubble li p::after {
+  content: '';
+  display: inline-block;
+  width: 37px;
+  height: 30px;
+  background: url(../assets/img/img_speech_w.png) center / cover no-repeat;
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+}
+.intro .speech_bubble.blue {
+  margin-bottom: 50px;
+}
+.intro .speech_bubble.blue li {
+  text-align: right;
+  margin-bottom: 25px;
+}
+.intro .speech_bubble.blue li p {
+  color: #fff;
+  background: linear-gradient(180deg, #94b4f5 0%, #5786e4);
+}
+.intro .speech_bubble.blue li:first-child p {
+  font-size: 1.8125rem;
+}
+.intro .speech_bubble.blue li p::after {
+  content: '';
+  display: inline-block;
+  width: 37px;
+  height: 30px;
+  background: url(../assets/img/img_speech_b.png) center / cover no-repeat;
+  position: absolute;
+  left: auto;
+  right: 20px;
+  bottom: -20px;
+}
+.intro a {
+  display: inline-block;
+  font-size: 0.875rem;
+  text-align: right;
+  text-decoration: underline;
+}
+.intro a::before {
+  display: inline-block;
+  content: '';
+  width: 39px;
+  height: 39px;
+  background: url('../assets/ico/ico_github_g.svg') center / cover no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.intro a:last-of-type:before {
+  width: 28px;
+  height: 28px;
+  background: url('../assets/ico/ico_blog_g.svg') center / cover no-repeat;
+}
+/* 전체 팀 소개 */
+.team_list_wrap {
+  width: 61.458333%;
+  min-width: 1180px;
+  margin: 0 auto 130px;
+}
+.team_list_wrap h3 {
+  font-size: 2rem;
+}
+.team_list_wrap > p {
+  font-size: 1.1875rem;
+  margin: 31px 0 64px;
+}
+.team_list {
+  display: flex;
+  gap: 40px;
+}
+.team_list li {
+  width: 25%;
+  text-align: center;
+  font-size: 1.8125rem;
+}
+.team_list li a {
+  height: 250px;
+  background: url('../assets/img/img_team_publiching.png') center / contain no-repeat;
+  margin-bottom: 50px;
+}
+.team_list li:nth-of-type(2) a {
+  background-image: url('../assets/img/img_team_frontend.png');
+}
+.team_list li:nth-of-type(3) a {
+  background-image: url('../assets/img/img_team_node.png');
+}
+.team_list li:nth-of-type(4) a {
+  background-image: url('../assets/img/img_team_spring.png');
+}
+.team_list span {
+  display: block;
+  font-size: 1.1875rem;
+}
+/* 개별팀소개 */
+.team_part_wrap {
+  background: url('../assets/img/bg_team_part.png') top / 76.5625% no-repeat;
+}
+.team_part_wrap > div {
+  width: 61.458333%;
+  min-width: 1180px;
+  height: 620px;
+  margin: 0 auto;
+  padding: 85px 0 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: flex-start;
+}
+.team_part_wrap > div > p {
+  width: 29.661%;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #0442bf;
+  line-height: 1.25;
+}
+.team_part_wrap .user_profile {
+  margin-top: 84px;
+}
+
+/* 팀원소개 */
+.team_member {
+  width: 100%;
+  background: #ecf0f3;
+  padding: 40px 0 60px;
+}
+.team_member > div {
+  width: 61.458333%;
+  min-width: 1180px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+.team_member h3 {
+  font-size: 4.375rem;
+  text-align: right;
+  color: rgba(69, 111, 197, 0.3);
+}
+.team_member .user_profile {
+  margin: 142px 0 180px;
+}
+@media screen and (max-width: 1200px) {
+  .intro > div {
+    width: 100%;
+    min-width: auto;
+  }
+  .team_list_wrap {
+    width: 100%;
+    min-width: auto;
+  }
+  .team_part_wrap > div {
+    width: 100%;
+    min-width: auto;
+  }
+  .team_member > div {
+    width: 100%;
+    min-width: auto;
+  }
+  .user_profile figure {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .intro > div {
+    width: calc(100%);
+    min-width: auto;
+    margin: 0 auto;
+    padding: 40px 0 78px;
+    display: block;
+  }
+  .intro figure {
+    width: 100%;
+    background: url(../assets/img/img_about_cloud_03.png) left 50px top no-repeat;
+    position: absolute;
+    top: 262px;
+    overflow: hidden;
+  }
+  .intro figure i {
+    width: 155px;
+    height: 185px;
+    margin: 78px auto;
+  }
+  .intro article {
+    width: 100%;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
+  .intro h3 {
+    font-size: 1.625rem;
+    margin-bottom: 40px;
+  }
+  .speech_bubble.white {
+    padding-bottom: 307px;
+  }
+  .intro .speech_bubble li p {
+    padding: 10px 10px;
+    font-size: 0.875rem;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  .intro .speech_bubble.blue li:first-child p {
+    font-size: 1.18755rem;
+  }
+  .intro .speech_bubble li p::after {
+    width: 17px;
+    height: 13px;
+    bottom: -11px;
+  }
+  .intro .speech_bubble.blue li p::after {
+    width: 17px;
+    height: 13px;
+    bottom: -11px;
+  }
+  .intro a::before {
+    display: inline-block;
+    content: '';
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  .intro a:last-of-type:before {
+    width: 20px;
+    height: 21px;
+    background: url(../assets/ico/ico_blog_g.svg) center / cover no-repeat;
+  }
+  /* team_list_wrap */
+  .team_list_wrap {
+    width: 100%;
+    padding: 0 14px;
+    box-sizing: border-box;
+    min-width: unset;
+    margin: 0 auto 52px;
+  }
+  .team_list_wrap h3 {
+    font-size: 1.9375rem;
+    word-break: keep-all;
+  }
+  .team_list {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .team_list li {
+    display: inline-block;
+    width: calc(60% - 20px);
+    text-align: center;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  .team_list li a {
+    height: 50vw;
+    background: url(../assets/img/img_team_publiching.png) center / contain no-repeat;
+    margin-bottom: 20px;
+  }
+  /* .team_part_wrap */
+  .team_part_wrap > div {
+    width: 100%;
+    min-width: auto;
+    flex-wrap: wrap;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
+  .team_part_wrap > div > p {
+    width: auto;
+    font-size: 3.1875rem;
+  }
+  .team_part_wrap {
+    width: 100%;
+    background: url(../assets/img/bg_team_part_m.png) left 65% top / 184% no-repeat;
+  }
+  .user_profile {
+    width: 100%;
+    gap: 10px;
+  }
+  .team_part_wrap .user_profile {
+    margin-top: 40px;
+  }
+  .user_profile figure {
+    width: 46.875vw;
+    height: 46.875vw;
+    border-radius: 30px;
+  }
+  .user_profile div {
+    width: calc(100% - 46.875vw - 5px);
+    padding-top: 10px;
+  }
+  .user_profile p:first-child {
+    max-width: auto;
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  .user_profile p:last-of-type {
+    max-width: auto;
+    min-height: auto;
+    font-size: 0.75rem;
+  }
+  .user_profile ul {
+    gap: 5px;
+  }
+  .user_profile li {
+    width: 25px;
+    height: 25px;
+  }
+  .user_profile li:nth-of-type(2) {
+    width: 22px;
+    height: 22px;
+  }
+  .team_member > div {
+    width: 100%;
+    min-width: auto;
+    padding: 0 14px;
+  }
+  .team_member h3 {
+    font-size: 2rem;
+  }
+  .team_part_wrap .user_profile {
+    margin: 60px 0 30px;
+  }
+  .user_profile.type02 figure {
+    width: 37vw;
+    height: 37vw;
+    border: 10px solid #ecf0f3;
+  }
+  .user_profile.type02 div {
+    margin-top: 0;
+  }
+  .user_profile.type02 p:first-child {
+    font-size: 0.875rem;
+    max-width: 130px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0442bf;
+  }
+  .user_profile.type02 p:last-of-type {
+    padding-right: 10px;
+    min-height: auto;
+    font-size: 0.75rem;
+  }
+  .user_profile.type02 li {
+    width: 22px;
+    height: 22px;
+    margin-top: 12px;
+  }
+  .user_profile.type02 li:nth-of-type(2) {
+    width: 22px;
+    height: 22px;
+  }
+}

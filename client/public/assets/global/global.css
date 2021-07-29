@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* common */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  color: #595959;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  min-height: 100%;
+}
+.wrap {
+  min-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 106px;
+  box-sizing: border-box;
+}
+a {
+  color: #595959;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+li {
+  list-style: none;
+}
+button {
+  border: none;
+}
