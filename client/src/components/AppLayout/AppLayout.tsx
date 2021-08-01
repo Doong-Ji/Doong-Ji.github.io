@@ -70,9 +70,8 @@ const AppLayout: FC = ({ children }) => {
             <Button type="primary" shape="round" style={{ left: '50px' }}>
               <Link to="signup">Sign in</Link>
             </Button>
-            <ModalBox>
-              <h1>이것은 모달 샘플입니다</h1>
-              <h2>모달 태그 안에 원하시는 내용을 넣어주세요</h2>
+            <ModalBox openBtnName="Modal" maskClosables={false} modalClass="btn_shadow" modalType="confirm">
+              <p>모달 태그 안에 원하시는 내용을 넣어주세요</p>
             </ModalBox>
           </Menu>
         </Header>
