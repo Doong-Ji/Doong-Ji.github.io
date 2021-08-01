@@ -1,0 +1,124 @@
+.member {
+  width: 56.25%;
+  min-width: 1080px;
+  margin: 80px auto 75px;
+}
+/* component : MemberProjectList */
+.member_project_list {
+  background: #f2f2f2;
+}
+.member_project_list > div {
+  width: 56.25%;
+  min-width: 1080px;
+  margin: 0 auto;
+  padding: 90px 0 190px;
+}
+.member_project_list .ttl_wrap {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 30px; */
+}
+.member_project_list h1 {
+  font-size: 1.5rem;
+}
+.member_project_list .btn_add_project {
+  width: 50px;
+  height: 50px;
+  background: url("../assets/ico/ico_add_b.svg") center / cover no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .member {
+    width: 100%;
+    min-width: auto;
+    padding: 0 4.1666%;
+    box-sizing: border-box;
+  }
+  .member_project_list > div {
+    width: 100%;
+    min-width: auto;
+    /* margin: 0 auto; */
+    padding: 90px 4.1666% 190px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) {
+  .member {
+    padding: 0 14px;
+  }
+  .member_project_list h1 {
+    font-size: 1.375rem;
+  }
+  .member_project_list .btn_add_project {
+    width: 30px;
+    height: 30px;
+  }
+  .member_project_list > div {
+    padding: 40px 14px 60px;
+  }
+}
+/* component : CardnewsList */
+.cardnews_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 1.5625vw;
+  /* grid-gap: 2.7777%; */
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 2.7777%; */
+}
+.cardnews_list li {
+  /* width: calc((100% - 5.5554%) / 3); */
+  width: 100%;
+  /* margin-bottom: 2.7777%; */
+  border-radius: 14.7058%;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 1.5625vw;
+}
+.cardnews_list figure {
+  width: 100%;
+  height: 235px;
+  background: url("../assets/img/test/img_leader_profile.jpg") center / cover
+    no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.cardnews_list .txt_wrap {
+  padding: 5.8823% 5.8823% 14.7058%;
+}
+.cardnews_list .txt_wrap p {
+  font-size: 1.5rem;
+  color: #595959;
+}
+.cardnews_list .txt_wrap p + p {
+  font-size: 1.125rem;
+}
+.progress {
+  width: 100%;
+  height: 38px;
+  background: violet;
+  margin: 5.8823% 0;
+}
+@media screen and (max-width: 768px) {
+  .cardnews_list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 3.125vw;
+  }
+
+  .cardnews_list li {
+    border-radius: 6.25vw;
+    margin-bottom: 3.125vw;
+  }
+  .cardnews_list figure {
+    height: 30vw;
+  }
+  .cardnews_list .txt_wrap p {
+    font-size: 0.75rem;
+  }
+  .cardnews_list .txt_wrap p + p {
+    font-size: 0.625rem;
+  }
+}

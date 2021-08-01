@@ -1,0 +1,289 @@
+/* common */
+.label {
+  padding: 0.3em 14px;
+  background-color: #f7f9fd;
+  border: 1px solid #0442bf;
+  color: #0442bf;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+button {
+  background: none;
+  cursor: pointer;
+}
+.btn_wrap_right {
+  text-align: right;
+}
+/* common end */
+.member_project {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.member_project_top {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  width: 61.458333%;
+  min-width: 1180px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  margin: 90px auto 60px;
+}
+.member_project_top figure {
+  width: 300px;
+  height: 300px;
+  background: url("../assets/img/test/img_leader_profile.jpg") center / cover
+    no-repeat;
+  border-radius: 50px;
+  /* position: absolute;
+  left: 0;
+  bottom: 0; */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.member_project_top .label {
+  margin-bottom: 0;
+  min-width: 111px;
+  text-align: center;
+  font-size: 1.125rem;
+  height: fit-content;
+}
+.member_project_top button {
+  font-size: 1.25rem;
+  color: #fff;
+  padding-right: 24px;
+  background: url("../assets/ico/ico_link_p.svg") right center / 16px 16px
+    no-repeat;
+  cursor: pointer;
+}
+.member_project_top button:last-child {
+  padding-right: 26px;
+  background: url("../assets/ico/ico_edit_p.svg") right center / 18px 18px
+    no-repeat;
+}
+.member_project_top button::after {
+  content: "";
+}
+
+.member_project_top .txt_wrap {
+  width: calc(100% - 300px);
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 170px 0 0 0;
+  padding: 45px 30px;
+}
+.member_project_top .txt_wrap::after {
+  content: "";
+  display: inline-block;
+  width: calc(100% - 300px);
+  padding-right: 19.2708vw;
+  height: 100%;
+  background: #5886e2;
+  position: absolute;
+  border-radius: 170px 0 0 0;
+  top: 0;
+  left: 300px;
+  z-index: -1;
+  box-shadow: 15px 15px 30px rgba(69, 111, 197, 0.3);
+}
+
+.member_project_top li {
+  display: flex;
+  gap: 20px;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+.member_project_top li + li {
+  margin-top: 15px;
+}
+.member_project_top li:first-child p {
+  font-size: 1.625rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  .member_project_top {
+    width: 100%;
+    min-width: auto;
+    padding: 0 50px;
+    margin: 90px auto 60px;
+  }
+  .member_project_top figure {
+    width: 23.4375vw;
+    height: 23.4375vw;
+    border-radius: 3.9062vw;
+  }
+  .member_project_top .txt_wrap {
+    width: calc(100% - 23.4375vw);
+  }
+  .member_project_top .txt_wrap::after {
+    width: calc(100% - 23.4375vw);
+    padding-right: 50px;
+    left: 23.4375vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .member_project_top {
+    padding: 0 14px;
+    margin: 40px auto;
+  }
+  .member_project_top figure {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+  }
+  .member_project_top .txt_wrap {
+    width: calc(100% - 120px);
+    border-radius: 70px 0 0 0;
+    padding: 14px 12px;
+  }
+  .member_project_top .txt_wrap::after {
+    width: calc(100% - 120px);
+    padding-right: 14px;
+    height: 100%;
+    border-radius: 70px 0 0 0;
+    left: 120px;
+    box-shadow: 6px 12px 6px rgba(69, 111, 197, 0.3);
+  }
+  .member_project_top button {
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  .member_project_top li {
+    gap: 10px;
+    font-size: 0.625rem;
+  }
+  .member_project_top li + li {
+    margin-top: 7px;
+  }
+  .member_project_top li:first-child p {
+    font-size: 1rem;
+  }
+  .member_project_top .label {
+    display: none;
+  }
+}
+
+/* component : member_project_content */
+.member_project_content {
+  width: 61.458333%;
+  min-width: 1180px;
+  padding: 0 50px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.member_project_content h1 {
+  font-size: 1.625rem;
+  padding-bottom: 20px;
+  border-bottom: 5px solid #456fc5;
+}
+.member_project_content > div {
+  padding: 66px 10px;
+}
+@media screen and (max-width: 1200px) {
+  .member_project_content {
+    width: 100%;
+    min-width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .member_project_content {
+    padding: 0 14px;
+  }
+  .member_project_content h1 {
+    font-size: 1.375rem;
+    padding-bottom: 5px;
+  }
+  .member_project_content > div {
+    padding: 10px 0px 60px;
+  }
+}
+
+/* component : member_review */
+.member_review {
+  background: #f2f2f2;
+}
+.member_review > div {
+  width: 61.458333%;
+  min-width: 1180px;
+  padding: 60px 50px 140px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.member_review_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.member_review h1 {
+  font-size: 1.625rem;
+}
+.btn_review {
+  font-size: 1.25rem;
+  height: 50px;
+  padding-right: 60px;
+  background: url("../assets/ico/ico_add_g.svg") right center / 50px 50px
+    no-repeat;
+  cursor: pointer;
+}
+
+.review_list li {
+  background: #fff;
+  border-radius: 0 50px 0 0;
+  padding: 40px 20px 30px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 20px rgba(154, 164, 175, 0.25);
+}
+.review_list li p:nth-of-type(1),
+.review_list li button {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #0442bf;
+}
+.review_list li .txt_wrap {
+  margin: 20px 0;
+  height: 140px;
+  line-height: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.review_list li .txt_wrap.on {
+  height: auto;
+  display: block;
+}
+@media screen and (max-width: 1200px) {
+  .member_review > div {
+    width: 100%;
+    min-width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .member_review > div {
+    padding: 40px 14px 80px;
+  }
+  .member_review h1 {
+    font-size: 1.375rem;
+    /* padding-bottom: 5px; */
+  }
+  .btn_review {
+    height: 35px;
+    padding-right: 35px;
+    background: url(../assets/ico/ico_add_g.svg) right center / 35px 35px
+      no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  .review_list li {
+    padding: 20px 10px 20px;
+    font-size: 1rem;
+  }
+  .review_list li .txt_wrap {
+    margin: 5px 0;
+  }
+}
