@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+@import url(./reset.css);
+@import url(./common.css);
+
+/* PC */
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #f7f9fd;
+}
+section {
+    margin: 70px 50px 0;
+}
+
+/* 제목영역 */
+.tit {
+    width: 100%;
+    margin-bottom: 26px;
+}
+.tit input {
+    width: 100%;
+    font-size: 3.2rem;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.wrap {
+    width: 100%;
+    border-top: 3px solid #456fc5;
+    border-bottom: 2px solid #a9a9a9;
+    margin-bottom: 30px;
+}
+
+/* 라벨 | 고정 | 투표 */
+.item_box {
+    display: flex;
+    justify-content: space-between;
+    line-height: 60px;
+    padding: 0 20px;
+}
+.left_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* 회원가입 화면의 select와 동일 한 디자인으로 적용 */
+select {
+    width: 150px;
+    border: 1px solid #456fc5;
+    border-radius: 10px;
+    padding: 11px 14px;
+    margin-right: 24px;
+    appearance: none;
+}
+
+/* 툴박스 */
+.tool_box {
+    height: 40px;
+    background-color: #e2e2e2;
+}
+
+/* 내용 */
+.editor_box {
+    width: 100%;
+    height: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 투표진행 */
+.progress {
+    max-width: 400px;
+    line-height: 45px;
+    padding: 0 13px;
+    border-radius: 10px;
+    border: 1px solid #e2e2e2;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.progress_box .fill {
+    width: 30%;
+    /* 투표수에 따라 변동 */
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 9px;
+    background-color: #f6f6f6;
+    display: none;
+}
+.progress .percent {
+    position: absolute;
+    top: 0;
+    right: 13px;
+}
+
+/* 미투표 그래프 */
+.progress_box .on {
+    color: #a6a6a6;
+}
+
+/* 투표한 그래프 */
+.progress_box .on_vote {
+    border: 1px solid #456fc5;
+    color: #456fc5;
+}
+.progress_box .on_vote .fill {
+    background-color: #ebf2ff;
+}
+.progress .txt {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.progress .on_vote .percent {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    color: #456fc5;
+}
+
+/* input으로 만든 투표 */
+/* RADIO */
+/* .vote_checks {position: relative;}
+.vote_checks input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+.vote_checks input[type="radio"] + label {
+  position: relative;
+  top: 0;
+  left: 0mm;
+  display: inline-block;
+  width: 50%;
+  line-height: 45px;
+  text-align: start;
+  padding: 0 13px;
+  border-radius: 10px;
+  border: 1px solid #a2a2a2;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.vote_checks input[type="radio"]:checked + label {
+  background-color: #f7f9fd;
+  border: 2px solid #456fc5;
+  color: #456fc5;;
+}
+.vote_checks input[type="radio"]:checked + label:after {
+  content: '100%';
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #456fc5;
+} */
+
+/* 취소 | 저장 버튼 */
+.content .btn_box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 180px;
+}
+.btn_box button {
+    width: 130px;
+    height: 50px;
+    border-radius: 50px;
+}
+.btn_box .btn_cancel {
+    border: 1px solid #e2e2e2;
+    background-color: #ffffff;
+    margin-right: 60px;
+}
+.btn_box .btn_save {
+    border: 1px solid #456fc5;
+    background-color: #456fc5;
+    color: #ffffff;
+}
+
+/* 팝업모음 */
+/* 투표만들기 */
+/* 회원가입 input과 동일 유효성은 필수입력만 */
+.btn_add,
+.modal.vote input {
+    width: 100%;
+    line-height: 45px;
+    text-align: start;
+    padding: 0 13px;
+    border-radius: 10px;
+    border: 1px solid #a2a2a2;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.modal.vote input::placeholder {
+    color: #a6a6a6;
+    font-weight: 300;
+}
+.modal.vote .tit {
+    margin-bottom: 30px;
+}
+.modal.vote .btn_add {
+    color: #a6a6a6;
+    border-color: #a6a6a6;
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+}
+
+.modal.vote input.essential {
+    background-color: #fff9f9;
+    border: 2px solid #e74659;
+}
+
+/* 팝업을 띄우기 위한 초기셋팅 */
+.bg_modal {
+    display: none;
+}
+.modal.vote {
+    display: none;
+}
+.modal.cancel {
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+    section {
+        margin: 40px 0 90px;
+    }
+
+    /* 제목영역 */
+    .tit {
+        margin-bottom: 12px;
+    }
+    .tit input {
+        font-size: 1.8rem;
+        font-weight: 400;
+        padding: 0 14px;
+        box-sizing: border-box;
+    }
+
+    /* 라벨 | 고정 | 투표 */
+    .item_box {
+        line-height: 50px;
+        padding: 0 14px;
+    }
+    .btn_vote {
+        width: 25px;
+    }
+
+    /* 회원가입 화면의 select와 동일 한 디자인으로 적용 */
+    select {
+        width: 110px;
+        margin-right: 14px;
+    }
+
+    /* 내용 */
+    .editor_box {
+        height: 400px;
+    }
+
+    /* 투표진행 */
+    .progress {
+        width: 100%;
+    }
+
+    /* 취소 | 저장 버튼 */
+    .content .btn_box {
+        margin-bottom: 90px;
+    }
+    .btn_box button {
+        width: 110px;
+        height: 40px;
+    }
+    .btn_box .btn_cancel {
+        margin-right: 40px;
+    }
+}
+

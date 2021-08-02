@@ -49,12 +49,13 @@ h5 {
   font-size: 1.2rem;
   font-weight: normal;
 }
-.user_nickname, .reporting_date, .reporting_time, .num {
+.user_nickname, .reporting_date, .reporting_time, .num, .user_part, .author_box {
   color: #a6a6a6;
 }
 
-/* radioo */
+/* 라디오버튼 */
 .checks {position: relative;}
+/* 숨김 */
 .checks input[type="radio"] {
   position: absolute;
   width: 1px;
@@ -108,9 +109,107 @@ h5 {
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 }
 
+/* 체크박스 */
+.checks {
+    position: relative;
+}
+.checks input[type="checkbox"] {
+    /* 숨김 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.checks input[type="checkbox"] + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.checks input[type="checkbox"] + label:before {
+    /* 새로운 체크박스 */
+    content: ' ';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: -2px 8px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    background: #fafafa;
+    border: 2px solid #cacece;
+    border-radius: 2px;
+    box-shadow: 3px 3px 10px rgba(221, 221, 221, 0.25);
+}
+.checks input[type="checkbox"] + label:active:before,
+.checks input[type="checkbox"]:checked + label:active:before {
+  box-shadow: 3px 3px 10px rgba(221, 221, 221, 0.25);
+}
+.checks input[type="checkbox"]:checked + label:before {
+    /* 체크박스를 체크했을때 */
+    content: '\2714';
+    color: #ffffff;
+    background: #456fc5;
+    border-color: #456fc5;
+    box-shadow: 3px 3px 10px rgba(221, 221, 221, 0.25);
+}
+
+/* 팝업 배경 */
+.bg_modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+
+/* 팝업 공통 */
+.modal {
+  width: 400px;
+  box-sizing: border-box;
+  padding: 60px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.30); 
+}
+.modal .txt {
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.modal .btn_box {
+  display: flex;
+}
+.modal .btn_box button {
+  width: 130px;
+  height: 50px;
+  border-radius: 50px;
+}
+.modal .btn_box .btn_cancel {
+  border: 1px solid #e2e2e2;
+  margin-right: 20px;
+}
+.modal .btn_box .btn_action {
+  border: 1px solid #456fc5;
+  background-color: #456fc5;
+  color: #ffffff;
+}
+
 /* MOBILE */
-@media (max-width:480px) {
-  /* common */
+@media (max-width:768px) {
+  /* 공통 */
   body, p, a, button {
     font-size: 1.4rem;
   }
@@ -123,6 +222,19 @@ h5 {
     font-weight: 500;
   }
   .label {
-    font-size: 1.2rem;
-}
+  font-size: 1.2rem;
+  }
+
+  /* 팝업 공통 */
+  .modal {
+    width: 295px;
+    padding: 45px 28px;
+  }
+  .modal .txt {
+    font-size: 1.6rem;
+  }
+  .modal .btn_box button {
+    width: 110px;
+    height: 40px;
+  }
 }

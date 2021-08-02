@@ -39,7 +39,7 @@ $(function () {
 
     //신고 팝업 열기
     $('.btn_report').click(function () {
-        //스크록 막기
+        //스크롤 막기
         $('body').css({overflow: 'hidden'});
         $(this)
             .parent('.btn_box_more')
@@ -48,7 +48,7 @@ $(function () {
     });
     //닫기
     $('.btn_cancel').click(function () {
-        //스크록 풀기
+        //스크롤 풀기
         $('body').css({overflow: 'scroll'});
         $('.bg_modal, .modal.report').css({display: 'none'});
     });
@@ -64,7 +64,7 @@ $(function () {
     });
     //닫기
     $('.btn_cancel').click(function () {
-        //스크록 풀기
+        //스크롤 풀기
         $('body').css({overflow: 'scroll'});
         $('.bg_modal, .modal.delete').css({display: 'none'});
     });
