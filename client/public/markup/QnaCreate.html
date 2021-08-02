@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+        <title>doongji</title>
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='./QnaCreate.css'>
+
+        <!-- JS -->
+        <script src="./js/jquery-1.12.3.js"></script>
+        <script src="./js/create.js"></script>
+    </head>
+    <body>
+        <section class="content">
+            <form action='#'>
+                <fieldset class="tit">
+                    <input
+                        type='text'
+                        placeholder="제목을 입력해주세요."
+                        onfocus="this.placeholder=''"
+                        onblur="this.placeholder='제목을 입력해주세요.'">
+                </fieldset>
+
+                <div class="wrap">
+                    <div class="item_box">
+                        <!-- 라벨 | 비밀글 -->
+                        <div class="left_box">
+                            <select name='#' id='#'>
+                                <option value='#'>선택</option>
+                                <option value='#'>퍼블리싱</option>
+                                <option value='#'>프론트엔드</option>
+                                <option value='#'>백엔드</option>
+                                <option value='#'>iOS</option>
+                                <option value='#'>안드로이드</option>
+                            </select>
+
+                            <div class="checks">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">비밀글</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- editor -->
+                    <!-- 툴박스 -->
+                    <div class="tool_box"></div>
+
+                    <!-- 내용 -->
+                    <div class="editor_box"></div>
+                </div>
+
+                <!-- 취소/확인 버튼 -->
+                <div class="btn_box">
+                    <button class="btn_cancel" type="button">취소</button>
+                    <button class="btn_save" type="button">저장</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- 팝업 모음-->
+        <div class="bg_modal">
+            <!-- 취소 팝업 -->
+            <!-- 취소 버튼 클릭시 띄우기 -->
+            <div class="modal cancel">
+                <p class="txt">작성을 취소하시겠습니까?</p>
+
+                <!-- 취소/확인 버튼 -->
+                <div class="btn_box">
+                    <button class="btn_cancel" type="button">취소</button>
+                    <button class="btn_action" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

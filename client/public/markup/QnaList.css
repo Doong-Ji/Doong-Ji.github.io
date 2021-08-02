@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 @import url(./reset.css);
 @import url(./common.css);
@@ -107,6 +107,7 @@ section.content {
     padding: 0.7em 46px;
     border-bottom: 1px solid #e2e2e2;
     display: flex;
+    align-items: center;
     position: relative;
     top: 0;
     left: 0;
@@ -114,28 +115,32 @@ section.content {
 .list_item:hover {
     background-color: #f9f9f9;
 }
-.tit_warp {
-    display: flex;
-    flex: 1;
-    align-items: center;
-}
 .ico {
     margin-right: 20px;
     color: #0442bf;
     font-size: 3.2rem;
 }
-.list_item .tit_box {
-    margin-right: 10px;
+.tit_box {
+    min-width: 0;
+    display: flex;
+    flex: 1;
+}
+.tit_box_inner {
+    min-width: 0;
 }
 .tit {
     max-width: 700px;
     padding-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .author {
     color: #a6a6a6;
 }
 .list_item img {
-    margin-right: 10px;
+    margin: 0 10px 0 5px;
+    align-self: flex-start;
 }
 
 /* 라벨 */
@@ -143,12 +148,16 @@ section.content {
     display: flex;
 }
 .label {
-    margin: auto 5px auto auto;
+    align-self: center;
+    margin-right: 5px;
     padding: 0.3em 14px;
     background-color: #f7f9fd;
     border: 1px solid #0442bf;
     color: #0442bf;
     border-radius: 50px;
+}
+.label:last-child {
+  margin-right: 0;
 }
 .label.unanswered {
     background-color: #f9f9f9;
@@ -181,7 +190,7 @@ section.content {
 }
 
 /* MOBILE */
-@media (max-width:480px) {
+@media (max-width:768px) {
     section.top {
         margin: 0 14px 16px;
     }
