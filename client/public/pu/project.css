@@ -1,0 +1,42 @@
+/* component : TeamProjectList */
+.team_project_list {
+  background: #f2f2f2;
+  padding-top: 90px;
+}
+.team_project_list > div {
+  width: 56.25%;
+  min-width: 1080px;
+  margin: 0 auto;
+  padding: 0 50px 100px;
+}
+.team_project_list h1 {
+  font-size: 1.625rem;
+}
+.projectSwiper .project_list {
+  gap: 0;
+}
+@media screen and (max-width: 1200px) {
+  .team_project_list {
+    width: 100%;
+    min-width: auto;
+    box-sizing: border-box;
+  }
+  .team_project_list > div {
+    width: 100%;
+    min-width: auto;
+    /* margin: 0 auto; */
+    padding: 0 4.1666% 190px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team_project_list {
+    padding-top: 48px;
+  }
+  .team_project_list h1 {
+    font-size: 1.375rem;
+  }
+  .team_project_list > div {
+    padding: 0px 14px 60px;
+  }
+}

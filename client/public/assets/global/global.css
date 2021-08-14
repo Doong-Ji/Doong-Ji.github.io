@@ -1,0 +1,419 @@
+@charset "UTF-8";
+/* common */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  color: #595959;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  min-height: 100%;
+}
+.wrap {
+  min-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 106px;
+  box-sizing: border-box;
+}
+a {
+  color: #595959;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+li {
+  list-style: none;
+}
+button {
+  border: none;
+}
+input {
+  border: none;
+  background: none;
+}
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+input:focus {
+  outline: none;
+}
+.label {
+  padding: 0.3em 14px;
+  background-color: #f7f9fd;
+  border: 1px solid #0442bf;
+  color: #0442bf;
+  border-radius: 50px;
+  display: inline-block;
+  flex: none;
+}
+
+/* swiper slide */
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-container-rtl .swiper-button-prev {
+  width: 20px;
+  height: 40px;
+  background: url(../ico/ico_next_g.svg) center / cover no-repeat;
+  right: 0px;
+  left: auto;
+}
+.swiper-container .swiper-button-prev,
+.swiper-container .swiper-container-rtl .swiper-button-next {
+  width: 20px;
+  height: 40px;
+  background: url(../ico/ico_prev-g.svg) center / cover no-repeat;
+  left: 0px;
+  right: auto;
+}
+
+/* component : TopWrap (서브페이지 타이틀) */
+.top_wrap {
+  margin: 80px auto 75px;
+}
+.top_wrap h1 {
+  text-align: center;
+  margin: 100px 0;
+  font-size: 2rem;
+  word-break: keep-all;
+}
+@media screen and (max-width: 768px) {
+  .top_wrap h1 {
+    margin: 85px 14px 90px;
+    font-size: 1.625rem;
+  }
+}
+
+/* component : ProjectList */
+.project_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 1.5625vw;
+}
+.project_list li {
+  width: 100%;
+  border-radius: 14.7058%;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 1.5625vw;
+}
+.project_list figure {
+  width: 100%;
+  height: 235px;
+  background: url("../img/test/img_leader_profile.jpg") center / cover no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.project_list .txt_wrap {
+  padding: 5.8823% 5.8823% 14.7058%;
+}
+.project_list .txt_wrap p {
+  font-size: 1.5rem;
+  color: #595959;
+}
+.project_list .txt_wrap p + p {
+  font-size: 1.125rem;
+}
+.progress {
+  width: 100%;
+  height: 38px;
+  background: violet;
+  margin: 5.8823% 0;
+}
+@media screen and (max-width: 768px) {
+  .project_list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 3.125vw;
+  }
+
+  .project_list li {
+    border-radius: 6.25vw;
+    margin-bottom: 3.125vw;
+  }
+  .project_list figure {
+    height: 30vw;
+  }
+  .project_list .txt_wrap p {
+    font-size: 0.75rem;
+  }
+  .project_list .txt_wrap p + p {
+    font-size: 0.625rem;
+  }
+
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* community common.css */
+
+/* FONT */
+/* font(en/num) : Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* font(ko) : Noto Sans KR */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+html {
+  /* font : (en/num) Roboto / (ko) Noto Sans KR */
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+
+  /* font : rem의 기준 */
+  /* font-size: 62.5%; */
+}
+
+/* PC */
+/* body,
+p,
+a,
+button {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #595959;
+}
+h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+h2 {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+h4 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+h5 {
+  font-size: 1.8rem;
+  font-weight: normal;
+} */
+.label,
+.check_user {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.author,
+.num,
+.user_name,
+.reporting_date,
+.reporting_time {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.user_nickname,
+.reporting_date,
+.reporting_time,
+.num,
+.user_part,
+.author_box {
+  color: #a6a6a6;
+}
+
+/* 라디오버튼 */
+.checks {
+  position: relative;
+}
+/* 숨김 */
+.checks input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.checks input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.checks input[type="radio"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  background: #f2f2f2;
+  border: 1px solid #e2e2e2;
+  border-radius: 100%;
+  box-shadow: 0px 0px 4px rgba(168, 168, 168, 0.25);
+}
+.checks input[type="radio"] + label:active:before,
+.checks input[type="radio"]:checked + label:active:before {
+  box-shadow: 0px 0px 4px rgba(168, 168, 168, 0.25);
+}
+.checks input[type="radio"]:checked + label:before {
+  background: #f2f2f2;
+  border-color: #456fc5;
+}
+.checks input[type="radio"]:checked + label:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 13px;
+  height: 13px;
+  background: #456fc5;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 체크박스 */
+.checks {
+  position: relative;
+}
+.checks input[type="checkbox"] {
+  /* 숨김 */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.checks input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.checks input[type="checkbox"] + label:before {
+  /* 새로운 체크박스 */
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: -2px 8px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  background: #fafafa;
+  border: 2px solid #cacece;
+  border-radius: 2px;
+  box-shadow: 3px 3px 10px rgba(221, 221, 221, 0.25);
+}
+.checks input[type="checkbox"] + label:active:before,
+.checks input[type="checkbox"]:checked + label:active:before {
+  box-shadow: 3px 3px 10px rgba(221, 221, 221, 0.25);
+}
+.checks input[type="checkbox"]:checked + label:before {
+  /* 체크박스를 체크했을때 */
+  content: "\2714";
+  color: #ffffff;
+  background: #456fc5;
+  border-color: #456fc5;
+  box-shadow: 3px 3px 10px rgba(221, 221, 221, 0.25);
+}
+
+/* 팝업 배경 */
+.bg_modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+
+/* 팝업 공통 */
+.modal {
+  width: 400px;
+  box-sizing: border-box;
+  padding: 60px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+.modal .txt {
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.modal .btn_box {
+  display: flex;
+}
+.modal .btn_box button {
+  width: 130px;
+  height: 50px;
+  border-radius: 50px;
+}
+.modal .btn_box .btn_cancel {
+  border: 1px solid #e2e2e2;
+  margin-right: 20px;
+}
+.modal .btn_box .btn_action {
+  border: 1px solid #456fc5;
+  background-color: #456fc5;
+  color: #ffffff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  /* 공통 */
+  body,
+  p,
+  a,
+  button {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  .label {
+    font-size: 1.2rem;
+  }
+
+  /* 팝업 공통 */
+  .modal {
+    width: 295px;
+    padding: 45px 28px;
+  }
+  .modal .txt {
+    font-size: 1.6rem;
+  }
+  .modal .btn_box button {
+    width: 110px;
+    height: 40px;
+  }
+}
